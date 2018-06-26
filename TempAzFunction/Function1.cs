@@ -14,6 +14,7 @@ namespace TempAzFunction
         [FunctionName("Function1")]
         public static IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequest req, TraceWriter log)
         {
+            log.Info("Teste");
             log.Info("C# HTTP trigger function processed a request.");
 
             string name = req.Query["name"];
